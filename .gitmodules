@@ -1,0 +1,3 @@
+[submodule "wdpassport-utils"]
+	path = wdpassport-utils
+	url = https://github.com/bobinx/wdpassport-utils
