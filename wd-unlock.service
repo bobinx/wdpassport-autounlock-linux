@@ -1,0 +1,14 @@
+[Unit]
+Description=WD Passport Auto Unlock
+After=local-fs.target
+# We want this service to be able to be started by udev activation or timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/local/bin/wd-auto-unlock/wd_auto_unlock.py
+RemainAfterExit=yes
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

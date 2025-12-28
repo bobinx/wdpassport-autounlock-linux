@@ -1,0 +1,2 @@
+# Unlock WD Passport when connected
+ACTION=="add", SUBSYSTEM=="block", ATTRS{model}=="My Passport*", ATTRS{vendor}=="WD", TAG+="systemd", ENV{SYSTEMD_WANTS}="wd-unlock.service"

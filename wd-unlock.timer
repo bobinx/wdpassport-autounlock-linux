@@ -1,0 +1,9 @@
+[Unit]
+Description=Run WD Unlock 30 seconds after boot
+
+[Timer]
+OnBootSec=30
+Unit=wd-unlock.service
+
+[Install]
+WantedBy=timers.target
