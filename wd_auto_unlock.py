@@ -18,14 +18,13 @@ MOUNT_POINT = "/media/WD"
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 # Expecting wdpassport-utils.py to be in the same folder as this script
 REPO_PATH = SCRIPT_DIR
-SCRIPT_PATH = os.path.join(REPO_PATH, "wdpassport-utils.py")
+SCRIPT_PATH = os.path.join(REPO_PATH, "wdpassport-utils/wdpassport-utils.py")
 # -----------------
 
 def setup_environment():
     """Sets up the environment to import the wdpassport-utils script."""
     if not os.path.exists(SCRIPT_PATH):
         print(f"Error: {SCRIPT_PATH} not found.")
-        print("Please clone https://github.com/0-duke/wdpassport-utils")
         sys.exit(1)
 
     sys.path.append(REPO_PATH)
