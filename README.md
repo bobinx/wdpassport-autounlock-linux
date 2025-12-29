@@ -1,6 +1,14 @@
 # WD Passport Auto Unlock & Mount
 
-Scripts to automatically unlock and mount a WD Passport HDD on Linux
+Scripts to automatically unlock and mount a WD Passport HDD on Linux.
+Included
+- A script that uses [wdpassport-utils](https://github.com/bobinx/wdpassport-utils) to unlock drive using a *hardcoded password and device uid*
+- A systemd service that executes the script
+- A systemd timer that triggers 30s after boot to auto unlock connected device (optional)
+- Udev rules to auto run the service when a specific device is connected (Update the udev rule to match your device)
+
+## Credits
+- Uses https://github.com/bobinx/wdpassport-utils, forked from https://github.com/0-duke/wdpassport-utils
 
 ## Prerequisites
 
